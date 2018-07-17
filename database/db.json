@@ -1,0 +1,15 @@
+{
+  "usuarios": [
+    {
+      "login": "juliano",
+      "senha": "123",
+      "id": 1
+    },
+    {
+      "login": "teste",
+      "senha": "123",
+      "id": 2
+    }
+  ],
+  "eventos":[]
+}
