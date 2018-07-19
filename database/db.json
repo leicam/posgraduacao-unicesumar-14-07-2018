@@ -11,5 +11,12 @@
       "id": 2
     }
   ],
-  "eventos":[]
+  "eventos": [
+    {
+      "titulo": "teste",
+      "descricao": "teste",
+      "organizador": "teste",
+      "id": 1
+    }
+  ]
 }

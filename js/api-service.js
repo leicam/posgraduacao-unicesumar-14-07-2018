@@ -34,4 +34,25 @@ window.app.service('APIService', function($http){
             }
         )
     }
+
+    this.save = function(evento, callback){
+        var urlEvento = url + '/eventos'
+
+        if(evento.id){
+            urlEvento += '/' + evento.id
+        }
+
+        $http({
+            url : urlEvento,
+            data : evento,
+            method : evento.id? 'PUT' : 'POST'
+        }).then(
+            function(res){
+                callback(null, res.data)
+            },
+            function(err){
+                callback(err)
+            }
+        )
+    }
 })

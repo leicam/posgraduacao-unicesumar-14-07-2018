@@ -15,7 +15,7 @@ window.app.config(function($routeProvider, $locationProvider){
             controller: 'homeController'
         })
         .when('/eventos', {
-            templateUrl: 'view/evento.html',
+            templateUrl: 'view/manutencao-eventos.html',
             controller: 'eventoController'
         })
         .when('/eventos/:id', {

@@ -14,7 +14,7 @@ window.app.controller('eventoController', function($scope, APIService, $routePar
         if(!$scope.evento.descricao) return window.alert('Preencha o campo descricao!')
         if(!$scope.evento.organizador) return window.alert('Preencha o campo organizador!')
         
-        APIService.save($scope.nota, function(err, data){
+        APIService.save($scope.evento, function(err, data){
             if(err) return window.alert(JSON.stringify(err))
     
             window.location.href = '/'
@@ -25,7 +25,7 @@ window.app.controller('eventoController', function($scope, APIService, $routePar
         var confirmar = confirm('Deseja realmente excluir esta nota?')
 
         if(confirmar){
-            APIService.delete($scope.nota, function(err, data){
+            APIService.delete($scope.evento, function(err, data){
                 if(err) return window.alert(JSON.stringify(err))
                 
                 window.location.href = '/'
