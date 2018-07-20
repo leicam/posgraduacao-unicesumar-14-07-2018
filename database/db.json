@@ -9,20 +9,30 @@
       "login": "teste",
       "senha": "123",
       "id": 2
+    },
+    {
+      "login": "marcelo",
+      "senha": "123",
+      "id": 3
     }
   ],
   "eventos": [
     {
-      "titulo": "teste",
-      "descricao": "teste",
-      "organizador": "teste",
+      "titulo": "Teste 1",
+      "usuarioId": 1,
+      "usuarioLogin": "juliano",
+      "descricao": "Teste 1",
+      "organizador": "Teste 1",
       "id": 1
     },
     {
-      "titulo": "titulo 2",
-      "descricao": "titulo 2",
-      "organizador": "titulo 2",
+      "titulo": "Teste 2",
+      "descricao": "Teste 2",
+      "organizador": "Teste 2",
+      "usuarioId": 1,
+      "usuarioLogin": "juliano",
       "id": 2
     }
-  ]
+  ],
+  "produtor": []
 }

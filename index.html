@@ -4,13 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!--<link rel="stylesheet" href="css/style.css">-->
-        <title>Gerenciador de Eventos</title> 
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>EvManager</title> 
     </head>
 
-    <body>
-        <ng-view></ng-view>
-
+    <body class="text-center">
         <script src="node_modules/angular/angular.min.js"></script>
         <script src="node_modules/angular-route/angular-route.min.js"></script>
         <script src="node_modules/moment/min/moment.min.js"></script>
@@ -19,5 +24,9 @@
         <script src="controller/home-controller.js"></script>
         <script src="controller/evento-controller.js"></script>
         <script src="controller/usuarios-controller.js"></script>
+
+        <form class="form-signin">
+            <ng-view></ng-view>
+        </form>
     </body>
 </html>

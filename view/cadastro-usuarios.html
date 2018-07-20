@@ -1,9 +1,19 @@
-<h1>Cadastro de Usuario</h1>
+<a class="bt-voltar" href="#!/">Left</a>
+
+<div class="checkbox mb-3"></div>
+
+<h1 class="h3 mb-3 font-weight-normal">Join to EvManager</h1>
+
+<div class="checkbox mb-3"></div>
+
 <div class="form">
     <div>
         <input type="text" ng-model="usuario.login" placeholder="Login">
+        <div class="checkbox mb-3"></div>
         <input type="text" ng-model="usuario.senha" placeholder="Senha">
     </div>
     
-    <button ng-click="cadastrar()">Cadastrar</button>
+    <div class="checkbox mb-3"></div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="cadastrar()">Sign up</button>
 </div>
