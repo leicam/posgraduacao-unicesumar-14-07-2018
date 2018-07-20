@@ -2,8 +2,8 @@ window.app.controller('usuariosController', function($scope, APIService, $routeP
     $scope.usuario = {}
 
     $scope.cadastrar = function(){
-        if(!$scope.usuario.login) return window.alert('Preencha o campo usuario!')
-        if(!$scope.usuario.senha) return window.alert('Preencha o campo senha!')
+        if(!$scope.usuario.login) return window.alert('Fill in the field login!')
+        if(!$scope.usuario.senha) return window.alert('Fill in the field password!')
 
 
         APIService.register($scope.usuario, function(err, data){

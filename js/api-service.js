@@ -26,7 +26,31 @@ window.app.service('APIService', function($http){
     this.access = function(usuario, callback){
         var urlConsulta = url + '/usuarios?login=' + usuario.login + '&senha=' + usuario.senha
         
-        console.log(urlConsulta)
+        $http.get(urlConsulta).then(
+            function(res){
+                callback(null, res.data)
+            },
+            function(err){
+                callback(err)
+            }
+        )
+    }
+
+    this.getUsuario = function(id, callback){
+        var urlConsulta = url + '/usuarios?id=' + id
+
+        $http.get(urlConsulta).then(
+            function(res){
+                callback(null, res.data)
+            },
+            function(err){
+                callback(err)
+            }
+        )
+    }
+
+    this.getEventosUsuario = function(id, callback){
+        var urlConsulta = url + '/eventos?usuarioId=' + id
 
         $http.get(urlConsulta).then(
             function(res){
@@ -49,6 +73,43 @@ window.app.service('APIService', function($http){
             url : urlEvento,
             data : evento,
             method : evento.id? 'PUT' : 'POST'
+        }).then(
+            function(res){
+                callback(null, res.data)
+            },
+            function(err){
+                callback(err)
+            }
+        )
+    }
+
+    this.saveProducer = function(produtor, callback){
+        var urlProdutor = url + '/produtor'
+
+        if(produtor.id){
+            urlProdutor += '/' + produtor.id
+        }
+
+        $http({
+            url : urlProdutor,
+            data : produtor,
+            method : produtor.id? 'PUT' : 'POST'
+        }).then(
+            function(res){
+                callback(null, res.data)
+            },
+            function(err){
+                callback(err)
+            }
+        )
+    }
+
+    this.deleteEvent = function(id, callback){
+        var urlEvento = url + '/eventos?id=' + id
+
+        $http({
+            url : urlEvento,
+            method : 'DELETE'
         }).then(
             function(res){
                 callback(null, res.data)
