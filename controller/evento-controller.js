@@ -5,10 +5,10 @@ window.app.controller('eventoController', function($scope, APIService, $routePar
         APIService.get($routeParams.id, function(err, data){
             if(err) return window.alert(JSON.stringify(err))
 
-            $scope.nota = data
+            $scope.eventos = data
         })
     }
-
+    
     $scope.salvar = function(){
         if(!$scope.evento.titulo) return window.alert('Preencha o campo titulo!')
         if(!$scope.evento.descricao) return window.alert('Preencha o campo descricao!')
@@ -17,7 +17,7 @@ window.app.controller('eventoController', function($scope, APIService, $routePar
         APIService.save($scope.evento, function(err, data){
             if(err) return window.alert(JSON.stringify(err))
     
-            window.location.href = '/'
+            window.location.href = '#!/home'
         })
     }    
 
@@ -28,7 +28,7 @@ window.app.controller('eventoController', function($scope, APIService, $routePar
             APIService.delete($scope.evento, function(err, data){
                 if(err) return window.alert(JSON.stringify(err))
                 
-                window.location.href = '/'
+                window.location.href = '#!/home'
             })
         }
     } 

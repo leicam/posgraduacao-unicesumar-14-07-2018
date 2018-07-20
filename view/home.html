@@ -1,16 +1,16 @@
-<a class="bt-quit" href="#!/">Sair</a>
-<a class="bt-new" href="#!/eventos">Novo</a>
+<a class="bt-quit" href="#!/">Left</a>
+<a class="bt-new" href="#!/eventos">New</a>
 
-<H1></H1>
+<div class="checkbox mb-3"></div>
+<h1 class="h3 mb-3 font-weight-normal">Events</h1>
+<div class="checkbox mb-3"></div>
 
-<div class="line"></div>
-
-<div class="box" ng-class="{red: evento.cancelado}" ng-repeat="evento in eventos">
+<div class="box" ng-repeat="item in eventos">
     <h3>{{evento.titulo}}</h3>
     <p>{{evento.descricao}}</p>
     <p>
         <a href="#!/nota/{{nota.id}}">Editar</a>
         <a href="#!/excluir/nota/{{nota.id}}">Excluir</a>
-        <a ng-click="cancelar(evento.id)">{{evento.acenlado ? 'Cancelar' : 'Ativar'}}</a>
+        <!--<a ng-click="cancelar(evento.id)">{{evento.acenlado ? 'Cancelar' : 'Ativar'}}</a>-->
     </p>
 </div>

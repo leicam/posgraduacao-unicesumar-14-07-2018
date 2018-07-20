@@ -1,5 +1,16 @@
-window.app.controller('homeController', function($scope, APIService){
+window.app.controller('homeController', function($scope, APIService,  $routeParams){
     $scope.usuario = {}
+    $scope.eventos = {}
+
+    console.log($routeParams)
+    
+    if($routeParams.id){
+        APIService.get($routeParams.id, function(err, data){
+            if(err) return window.alert(JSON.stringify(err))
+
+            $scope.eventos = data
+        })
+    }
 
     $scope.acessar = function(){
         if(!$scope.usuario.login) return window.alert('Login nao informado!')

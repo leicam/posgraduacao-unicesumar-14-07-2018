@@ -9,6 +9,11 @@
       "login": "teste",
       "senha": "123",
       "id": 2
+    },
+    {
+      "login": "marcelo",
+      "senha": "123",
+      "id": 3
     }
   ],
   "eventos": [
@@ -17,6 +22,19 @@
       "descricao": "teste",
       "organizador": "teste",
       "id": 1
+    },
+    {
+      "titulo": "teste 1",
+      "descricao": "teste 1",
+      "organizador": "teste 1",
+      "id": 2
+    },
+    {
+      "titulo": "teste 2",
+      "descricao": "teste 2",
+      "organizador": "teste 2",
+      "id": 3
     }
-  ]
+  ],
+  "produtor":[]
 }
