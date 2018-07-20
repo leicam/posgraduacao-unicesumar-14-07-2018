@@ -17,7 +17,7 @@ window.app.controller('eventoController', function($scope, APIService, $routePar
         APIService.save($scope.evento, function(err, data){
             if(err) return window.alert(JSON.stringify(err))
     
-            window.location.href = '/'
+            window.location.href = '/view/home.html'
         })
     }    
 
