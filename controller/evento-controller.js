@@ -1,6 +1,7 @@
 window.app.controller('eventoController', function($scope, APIService, $routeParams){
     var url = '#!/home'
 
+    $scope.session = {"id":$routeParams.usuarioId}
     $scope.evento = {}
     $scope.usuario = {}
 
@@ -10,6 +11,14 @@ window.app.controller('eventoController', function($scope, APIService, $routePar
     
              $scope.usuario = data[0]
         })
+
+        if($routeParams.id){
+            APIService.getEvento($routeParams.id, function(err, data){
+                if(err) return window.alert(JSON.stringify(err))
+        
+                 $scope.evento = data[0]
+            })
+        }
     }
 
     $scope.salvar = function(){

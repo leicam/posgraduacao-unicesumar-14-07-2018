@@ -24,14 +24,6 @@
       "descricao": "Teste 1",
       "organizador": "Teste 1",
       "id": 1
-    },
-    {
-      "titulo": "Teste 2",
-      "descricao": "Teste 2",
-      "organizador": "Teste 2",
-      "usuarioId": 1,
-      "usuarioLogin": "juliano",
-      "id": 2
     }
   ],
   "produtor": []

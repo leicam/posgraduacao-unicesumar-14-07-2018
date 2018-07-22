@@ -10,7 +10,7 @@ window.app.config(function($routeProvider, $locationProvider){
             templateUrl: 'view/cadastro-usuarios.html',
             controller: 'usuariosController'
         })
-        .when('/home/:id', {
+        .when('/home/:usuarioId', {
             templateUrl: 'view/home.html',
             controller: 'homeController'
         })

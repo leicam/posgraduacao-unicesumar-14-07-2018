@@ -62,6 +62,19 @@ window.app.service('APIService', function($http){
         )
     }
 
+    this.getEvento = function(id, callback){
+        var urlConsulta = url + '/eventos?id=' + id
+
+        $http.get(urlConsulta).then(
+            function(res){
+                callback(null, res.data)
+            },
+            function(err){
+                callback(err)
+            }
+        )
+    }
+
     this.save = function(evento, callback){
         var urlEvento = url + '/eventos'
 
@@ -104,11 +117,12 @@ window.app.service('APIService', function($http){
         )
     }
 
-    this.deleteEvent = function(id, callback){
-        var urlEvento = url + '/eventos?id=' + id
+    this.deleteEvent = function(evento, callback){
+        var urlEvento = url + '/eventos/' + evento.id
 
         $http({
             url : urlEvento,
+            data: evento,
             method : 'DELETE'
         }).then(
             function(res){

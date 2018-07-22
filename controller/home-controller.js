@@ -1,6 +1,7 @@
 window.app.controller('homeController', function($scope, APIService,  $routeParams){
     var url = '#!/home'
 
+    $scope.session = {"id":$routeParams.usuarioId}
     $scope.eventos = []
     $scope.usuario = {}
 
@@ -45,11 +46,11 @@ window.app.controller('homeController', function($scope, APIService,  $routePara
         })
     }
 
-    $scope.excluir = function(id){
+    $scope.excluir = function(evento){
         var confirmar = confirm('Do you really want to delete this event??')
 
         if(confirmar){
-            APIService.deleteEvent(id, function(err, data){
+            APIService.deleteEvent(evento, function(err, data){
                 if(err) return window.alert(JSON.stringify(err))
                 
                 $scope.carregarEventosUsuario()
