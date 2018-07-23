@@ -32,7 +32,9 @@ window.app.controller('eventoController', function($scope, APIService, $routePar
         APIService.save($scope.evento, function(err, data){
             if(err) return window.alert(JSON.stringify(err))
     
-            url = url + $routeParams.usuarioId
+            url = url + '/' + $scope.session.id
+            
+            console.log(url)
 
             window.location.href = url
         })
